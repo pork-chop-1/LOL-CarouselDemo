@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+	<title>Page Title</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="aaa.css" />
+</head>
+<body><!--
+	<div id="rolling"></div>
+	<hr>
+	<div id="rock">
+		<div class="rock-item">
+			<div><img src="resource/roll1.jpg" alt=""></div>
+			<div><img src="resource/roll2.jpg" alt=""></div>
+			<div><img src="resource/roll3.jpg" alt=""></div>
+			<div><img src="resource/roll4.jpg" alt=""></div>
+			<div><img src="resource/roll5.jpg" alt=""></div>
+		</div>
+	</div>
+	<div id="rock-thumbnail">
+		<div class="rock-thumbnail-item active">roll 1</div>
+		<div class="rock-thumbnail-item">roll 2</div>
+		<div class="rock-thumbnail-item">roll 3</div>
+		<div class="rock-thumbnail-item">roll 4</div>
+		<div class="rock-thumbnail-item">roll 5</div>
+	</div>
+	<hr>-->
+	<!--
+	<div class="m-header">
+        <a href="/home" class="logo"><img src="https://sc2.nosdn.127.net/1/style/v4/landing/201804/logo.png"></a>
+        <ul class="nav f-cb">
+            <li class="home">
+            	<a href="/home">进入官网</a>
+            </li>
+            <li class="reg">
+            	<a href="https://www.battlenet.com.cn/account/creation/zh/tos.html?theme=sc2">注册账号</a>
+            	
+            </li>
+            <li class="download">
+            	<a href="/download">游戏下载</a>
+            	
+            </li>
+            <li class="free">
+                <a href="/xs">现已免费</a>
+                
+            </li>
+        </ul>
+    </div>
+
+	<div class="m-content">
+			<div class="kv-pic"><div class="item prev"><div class="item-backgroundWrap"><div class="item-background"><span style="background-image: url(https://sc2.nosdn.127.net/2/pic/201808/Landing_1.jpg);"></span></div></div><div class="item-contentWrap"><div class="item-content"><img class="item-title" src="https://sc2.nosdn.127.net/2/pic/201808/Landing_png.png"><a class="item-btn" href="https://shop.battlenet.com.cn/zh-cn/product/starcraft-ii-tychus-commander">了解详情</a></div></div></div><div class="item next"><div class="item-backgroundWrap"><div class="item-background"><span style="background-image: url(http://sc2.nosdn.127.net/2/pic/201806/Landing-BG.jpg);"></span></div></div><div class="item-contentWrap"><div class="item-content"><img class="item-title" src="https://sc2.nosdn.127.net/2/pic/201808/0830_SCR.png"><a class="item-btn" href="http://sc.blizzard.cn/article/news/23">了解详情</a></div></div></div><div class="item next"><div class="item-backgroundWrap"><div class="item-background"><span style="background-image: url(http://sc2.nosdn.127.net/2/pic/201808/warchestS3_BG3.jpg);"></span></div></div><div class="item-contentWrap"><div class="item-content"><img class="item-title" src="http://sc2.nosdn.127.net/2/pic/201808/warchestS3_2.png"><a class="item-btn" href="http://sc2.blizzard.cn/minisite/war-chest">了解详情</a></div></div></div><div class="item next active"><div class="item-backgroundWrap"><div class="item-background"><span style="background-image: url(http://sc2.nosdn.127.net/2/pic/201804/BG2.jpg);"></span></div></div><div class="item-contentWrap"><div class="item-content"><img class="item-title" src="http://sc2.nos.netease.com/1/style/v4/landing/201804/text.png"><a class="item-btn" href="http://sc2.blizzard.cn/articles/1001/77120">了解详情</a></div></div></div></div>
+    </div>-->
+	<body>
+
+			<div class="banner_box">
+				<div class="box">
+					<div class="carousel">
+						<!-- 轮播图片数量可变 -->
+						<div class="img">
+							<img src="img/demo5.jpg"/>
+						</div>
+						<div class="img">
+							<img src="img/demo2.jpg"/>
+						</div>
+						<div class="img">
+							<img src="img/demo1.jpg"/>
+						</div>
+						<div class="img">
+							<img src="img/demo9.jpg"/>
+						</div>
+						<div class="img">
+							<img src="img/demo6.jpg"/>
+						</div>
+						<div class="img">
+							<img src="img/demo7.jpg"/>
+						</div>
+						<div class="img">
+							<img src="img/demo8.jpg"/>
+						</div>
+						<div class="img">
+							<img src="img/demo9.jpg"/>
+						</div>
+					</div>
+				</div>
+		
+				<button class="left_btn" onclick="left()">left</button>
+				<button class="right_btn" onclick="right()">right</button>
+			</div>
+		
+		
+		
+		</body>
+		
+		
+		<script>
+			var imgNub;               //轮播图片数量
+			$(function(){
+				imgNub = $(".carousel .img").size();             //获取轮播图片数量
+				for(i=0;i<imgNub;i++){
+					$(".carousel .img:eq("+i+")").attr("imgId",i);
+				}
+				//根据轮播图片数量设定图片位置对应的class
+				//img3为中央展示位
+				//img2 && img 4分别为左右
+				if(imgNub==1){
+					//img3
+					for(i=0;i<imgNub;i++){
+						$(".carousel .img:eq("+i+")").addClass("img3");
+					}
+				}
+				if(imgNub==2){
+					//img 3、4
+					for(i=0;i<imgNub;i++){
+						$(".carousel .img:eq("+i+")").addClass("img"+(i+3));
+					}
+				}
+				if(imgNub==3){
+					//img 2、3、4
+					for(i=0;i<imgNub;i++){
+						$(".carousel .img:eq("+i+")").addClass("img"+(i+2));
+					}
+				}
+				if(imgNub>3&&imgNub<6){
+					//img 1、2、3、4、(5)
+					for(i=0;i<imgNub;i++){
+						$(".carousel .img:eq("+i+")").addClass("img"+(i+1));
+					}
+				}
+				if(imgNub>=6){
+					for(i=0;i<imgNub;i++){
+						if(i<5){
+							// img 1、2、3、4、5
+							$(".carousel .img:eq("+i+")").addClass("img"+(i+1));
+						}else{
+							//img 5
+							$(".carousel .img:eq("+i+")").addClass("img5");
+						}
+					}
+				}
+				imgClicked();
+			});
+			//右滑动
+			function right(){
+				var fy = [];
+				for(i=0;i<imgNub;i++){
+					fy[i]=$(".carousel .img[imgId="+i+"]").attr("class");
+				}
+				console.log(fy);
+				for(i=0;i<imgNub;i++){
+					if(i==0){
+						//最后一个->第一个
+						$(".carousel .img[imgId="+i+"]").attr("class",fy[imgNub-1]);
+					}else{
+						//其他依次后移
+						$(".carousel .img[imgId="+i+"]").attr("class",fy[i-1]);
+					}
+				}
+				imgClicked();
+			}
+			//左滑动
+			function left(){
+				var fy = [];
+				for(i=0;i<imgNub;i++){
+					fy[i]=$(".carousel .img[imgId="+i+"]").attr("class");
+				}
+				for(i=0;i<imgNub;i++){
+					if(i==(imgNub-1)){
+						//第一个->最后一个
+						$(".carousel .img[imgId="+i+"]").attr("class",fy[0]);
+					}else{
+						//其他依次前移
+						$(".carousel .img[imgId="+i+"]").attr("class",fy[i+1]);
+					}
+				}
+				imgClickFy();
+			}
+			//轮播图片左右图片点击翻页
+			function imgClicked(){
+				$(".carousel .img").removeAttr("onclick");
+				$(".carousel .img2").attr("onclick","left()");
+				$(".carousel .img4").attr("onclick","right()");
+			}
+		</script>
+		<style>
+			.banner_box .left_btn {
+				position: relative;
+				top: -350px;
+				height: 100px;
+				width: 80px;
+				z-index: 10;
+			}
+			.banner_box ._left_btn:hover{
+				cursor:pointer;
+			}
+			.banner_box .right_btn {
+				float: right;
+				position: relative;
+				top: -350px;
+				right: 0;
+				height: 100px;
+				width: 80px;
+				z-index: 10;
+			}
+			.banner_box .right_btn:hover{
+				cursor:pointer;
+			}
+			.banner_box {
+				max-width: 1600px;
+				min-width: 1200px;
+				margin: 0 auto;
+			}
+			.box {
+				width: 1200px;
+				height: 455px;
+				margin: 0 auto;
+			}
+			.carousel{
+				width: 100%;
+				height: 100%;
+				overflow: hidden;
+				position: relative;
+			}
+			.carousel .img{
+				overflow: hidden;
+				position: absolute;
+				transition: width 0.4s,height 0.4s,top 0.4s,left 0.4s,z-index 0.4s;
+			}
+			.carousel .img img{
+				width: calc(100% - 14px);
+				height: calc(100% - 14px);
+				margin: 7px;
+			}
+			.carousel .img1{
+				width: 0px;
+				height: 0px;
+				top: 30%;
+				left: -50%;
+				z-index: 1;
+			}
+			.carousel .img2{
+				width: 500px;
+				height: 200px;
+				top: 20%;
+				left: -20%;
+				z-index: 2;
+			}
+			.carousel .img3{
+				width: 840px;
+				height: 340px;
+				top: 10%;
+				left: 15%;
+				z-index: 3;
+			}
+			.carousel .img4{
+				width: 500px;
+				height: 200px;
+				top: 20%;
+				left: 60%;
+				z-index: 2;
+			}
+			.carousel .img5{
+				width: 0px;
+				height: 0px;
+				top: 30%;
+				left: 110%;
+				z-index: 1;
+			}
+		</style>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	
+	<script src="aaa.js"></script>
+</body>
+</html>

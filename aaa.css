@@ -1,0 +1,142 @@
+#rolling{
+	width: 820px;
+	height: 350px;
+	margin-top: 0;
+	margin-left: auto;
+	margin-right:auto;
+	background-image: url('resource/roll1.jpg');
+	background-size: cover;
+	animation: rock 15s infinite;
+}
+
+#rock{
+	overflow: hidden;
+	
+	width: 820px;
+	height: 350px;
+	margin-top: 0;
+	margin-left: auto;
+	margin-right:auto;
+	
+	padding: 0;
+	font-size: 0;
+}
+
+#rock>.rock-item{
+	margin: 0;
+	
+	width: 820px;
+	height: 350px;
+	position: relative;white-space:nowrap;
+}
+#rock>.rock-item div{
+	display: inline-block;
+}
+
+
+#rock>.rock-item img{
+	width:830px;
+	height: 100%;
+}
+
+#rock-thumbnail{
+	width: 820px;
+	height: auto;
+	margin-top: 0;
+	margin-left: auto;
+	margin-right:auto;
+	padding: 0;
+	font-size:0;
+}
+
+#rock-thumbnail>.rock-thumbnail-item.active{
+	background-color:rgb(0, 0, 0);
+	color:white;
+}
+
+#rock-thumbnail>.rock-thumbnail-item{
+	padding-top:10px;
+	padding-bottom: 10px;
+	margin: 0;
+	font-size:14px;
+	width: 20%;
+	text-align: center;
+	vertical-align:middle;
+	display: inline-block;
+	background-color:rgb(80, 80, 80);
+	color:white;
+}
+
+
+
+@keyframes rock{
+	0%{
+		background-image: url('resource/roll1.jpg');
+	}
+	20%{
+		background-image: url('resource/roll2.jpg');
+	}
+	40%{
+		background-image: url('resource/roll3.jpg');
+	}
+	60%{
+		background-image: url('resource/roll4.jpg');
+	}
+	80%{
+		background-image: url('resource/roll5.jpg');
+	}
+	100%{
+		background-image: url('resource/roll1.jpg');
+	}
+}
+.m-header{
+	width: 1200px;
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    margin-left: -600px;
+    top: 0;
+    z-index: 2;
+}
+.m-header>.logo{
+	position: absolute;
+    left: 50%;
+    margin-left: -186px;
+}
+.m-header>.nav{
+	padding-top: 40px;
+	list-style: none;
+}
+.m-header>.nav>li{
+	float: left;
+	width: 200px;
+	height: 60px;
+	background:url('http://sc2.nos.netease.com/1/style/v4/landing/201804/nav-btn.png') no-repeat 0 0;
+}
+.m-header>.nav>li:hover{
+	background:url('http://sc2.nos.netease.com/1/style/v4/landing/201804/nav-btn.png') no-repeat 0 -60px;
+}
+.m-header>.nav>li.free{
+	background:url('http://sc2.nos.netease.com/1/style/v4/landing/201804/nav-btn.png') no-repeat -200px 0;
+}
+.m-header>.nav>li.free:hover{
+	background:url('http://sc2.nos.netease.com/1/style/v4/landing/201804/nav-btn.png') no-repeat -200px -60px;
+}
+.m-header>.nav>li.reg{
+	margin-right: 398px;
+}
+.m-header>.nav>li a{
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	line-height: 60px;
+	display: block;
+}
+a{
+	text-decoration: none;color: rgb(163, 202, 248);
+}
+
+blockquote, body, code, dd, div, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, input, legend, li, ol, p, pre, td, textarea, th, ul {
+    margin: 0;
+    padding: 0;
+}
