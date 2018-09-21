@@ -1,2 +1,3 @@
 # LOL-CarouselDemo
 模仿lol官网的carousel
+不过现在还有一个功能没有满足，就是滚动特定页面时下面的tag没有响应
